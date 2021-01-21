@@ -1,0 +1,6 @@
+ro.display.series=Samsung Tab S6
+ro.product.board=msmnile
+ro.board.platform=msmnile
+sys.usb.controller=a600000.dwc3
+#fbe.metadata.wrappedkey=true
+ro.boot.bootdevice=1d84000.ufshc
