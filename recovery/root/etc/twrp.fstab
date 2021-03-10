@@ -1,7 +1,7 @@
 # mount point	fstype	device	device2						flags
-/system		ext4	/dev/block/bootdevice/by-name/system			flags=display="System"
+/system		ext4	/dev/block/bootdevice/by-name/system			flags=backup=0;display="System"
 /system_image	emmc	/dev/block/bootdevice/by-name/system			flags=backup=1;flashimg
-/vendor		ext4	/dev/block/bootdevice/by-name/vendor			flags=display="Vendor";backup=1;wipeingui
+/vendor		ext4	/dev/block/bootdevice/by-name/vendor			flags=backup=0;display="Vendor"
 /vendor_image	emmc	/dev/block/bootdevice/by-name/vendor			flags=backup=1;flashimg
 /product	ext4	/dev/block/bootdevice/by-name/product			flags=backup=0;display="Product"
 /product_image	emmc	/dev/block/bootdevice/by-name/product			flags=backup=1;flashimg
@@ -11,13 +11,12 @@
 /data		f2fs	/dev/block/bootdevice/by-name/userdata			flags=wait;encryptable=footer;length=-16384
 /cache		ext4	/dev/block/bootdevice/by-name/cache			flags=backup=1;display="Cache"
 /efs		ext4	/dev/block/bootdevice/by-name/sec_efs			flags=backup=1;display="EFS"
-/carrier	ext4	/dev/block/bootdevice/by-name/carrier
-/firmware	emmc	/dev/block/bootdevice/by-name/apnhlos			flags=backup=1;display="Firmware";fsflags=ro
+/firmware	emmc	/dev/block/bootdevice/by-name/apnhlos			flags=backup=1;display="Firmware"
 /modem		emmc	/dev/block/bootdevice/by-name/modem			flags=backup=1;display="Modem"
 /dsp		emmc	/dev/block/bootdevice/by-name/dsp
 /misc		emmc	/dev/block/bootdevice/by-name/misc
-/keydata	ext4	/dev/block/bootdevice/by-name/keydata			flags=backup=1;wipeingui
-/keyrefuge	ext4	/dev/block/bootdevice/by-name/keyrefuge			flags=backup=1;wipeingui
+/keydata	ext4	/dev/block/bootdevice/by-name/keydata
+/keyrefuge	ext4	/dev/block/bootdevice/by-name/keyrefuge
 /dtbo		emmc	/dev/block/bootdevice/by-name/dtbo			flags=backup=1;display="Dtbo"
 
 # Removable storage
